@@ -1,0 +1,20 @@
+README
+This tool generates 2D grids.
+
+AUTHOR:
+Melanie Cornelius (nee Dooley)
+Built for the Illinois Institute of Technology Interprofessional Project:
+Developing an Antimatter Gravity Interferometer
+
+CURRENT OUTPUT FORMATS:
+.stl
+
+FUTURE OUTPUT FORMATS:
+L-Edit cells
+
+CURRENT GEOMETRIES:
+Columnar grid
+
+FUTURE GEOMETRIES:
+Psudo-random
+Ashlar
