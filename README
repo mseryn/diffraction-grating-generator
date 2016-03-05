@@ -15,9 +15,9 @@ To Build:
     - From stl_tools/, move stl_tools/stl_tools/ to diffraction_grating_generator/
 
 To Run:
-> ./difraction_grating_generator <Number of Rows> <Number of Columns> <Slit Pitch> <Slit Length>
+> ./src/difraction_grating_generator <Number of Rows> <Number of Columns> <Slit Pitch> <Slit Length>
 To Run using Optional Inputs:
-> ./difraction_grating_generator <Number of Rows> <Number of Columns> <Slit Pitch> <Slit Length> [--strut_width=<Strut Width>] [--frame_boarder=<Frame Boarder Thickness] [--file_name=<Desired File Name>
+> ./src/difraction_grating_generator <Number of Rows> <Number of Columns> <Slit Pitch> <Slit Length> [--strut_width=<Strut Width>] [--frame_boarder=<Frame Boarder Thickness] [--file_name=<Desired File Name>
 
 NOTES:
 - Output files have relative dimensions - no units are implicit
