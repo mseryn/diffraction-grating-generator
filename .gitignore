@@ -1,0 +1,6 @@
+# Ignore stl_tools source
+stl_tools*
+# Ignore pyaches
+__pycache__
+# Ignore .swp filetypes
+*.swp
