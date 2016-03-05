@@ -22,6 +22,22 @@ import math
 import structure_methods
 import argparse
 
+def create_grating(col, row, width, pitch):
+    columnar_matrix = structure_methods.columnar_generator(col, row, width, pitch)
+
+    # Make a numpy array    
+    columnar_matrix_numpy =  numpy.array(columnar_matrix)
+
+    # This line sets the threshold to NaN rather than 0 (flat grating)
+    numpy.set_printoptions(threshold = numpy.nan)
+
+    #print(columnar_matrix_numpy)
+
+    # Making the .stl file
+    fn = "default.stl"
+    stl_tools.numpy2stl(columnar_matrix_numpy, fn, scale=1, mask_val = 1, force_python=True, square_corners=True)
+
+
 if __name__ == '__main__':
 
     # Processing user input
@@ -35,17 +51,4 @@ if __name__ == '__main__':
     parser.add_argument("--file_name", help = "Specifies output file name, defaults to 'default.stl'")
     args = parser.parse_args()
 
-
-    columnar_matrix = structure_methods.columnar_generator(args.no_columns, args.no_rows, args.slit_width, args.pitch)
-
-    # Make a numpy array    
-    columnar_matrix_numpy =  numpy.array(columnar_matrix)
-
-    # This line sets the threshold to NaN rather than 0 (flat grating)
-    numpy.set_printoptions(threshold = numpy.nan)
-
-    #print(columnar_matrix_numpy)
-
-    # Making the .stl file
-    fn = "default.stl"
-    stl_tools.numpy2stl(columnar_matrix_numpy, fn, scale=1, mask_val = 1, force_python=True, square_corners=True)
+    create_grating(args.no_columns, args.no_rows, args.slit_width, args.pitch)
