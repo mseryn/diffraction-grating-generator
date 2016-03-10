@@ -23,7 +23,8 @@ import structure_methods
 import argparse
 
 def create_grating(col, row, width, pitch):
-    columnar_matrix = structure_methods.columnar_generator(col, row, width, pitch)
+    height = pitch // 2
+    columnar_matrix = structure_methods.columnar_generator(col, row, width, height)
 
     # Make a numpy array    
     columnar_matrix_numpy =  numpy.array(columnar_matrix)

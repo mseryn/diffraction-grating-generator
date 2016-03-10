@@ -13,12 +13,15 @@ import stl_tools
 import numpy
 import math
 
-def columnar_generator(rows, slit_count, slit_height, slit_width, frame_dim = 1, strut_height = 0, strut_width = 1):
+def columnar_generator(slit_count, rows, slit_width, slit_height, frame_dim = 1, strut_height = None, strut_width = None):
 
     depth = 2
 
-    if strut_height == 0:
+    if strut_height == None:
         strut_height = slit_height
+
+    if strut_width == None:
+        strut_width = slit_height
 
     factor = math.gcd(slit_height, math.gcd(slit_width, math.gcd(frame_dim, math.gcd(strut_height, strut_width))))
 
